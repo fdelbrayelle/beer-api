@@ -1,0 +1,16 @@
+on:
+  push:
+  # schedule:
+  #   - cron:  '*/3 * * * *'
+
+jobs:
+  tavern-testing-job:
+    name: Tavern Testing job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Launch some Tavern Testing Tests
+        uses: cclauss/GitHub-Action-for-pytest@master
+        with:
+          # args: pytest test_beer_service.tavern.yml -v
+          args: pytest -h
