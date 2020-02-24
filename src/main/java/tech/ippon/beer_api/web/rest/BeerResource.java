@@ -86,7 +86,7 @@ public class BeerResource {
     @GetMapping("/beers")
     public List<BeerDTO> getAllBeers() {
         log.debug("REST request to get all Beers");
-        return beerService.findAll();
+        return null;
     }
 
     /**
