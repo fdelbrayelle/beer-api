@@ -12,4 +12,4 @@ jobs:
       - name: Launch some Tavern Testing Tests
         uses: cclauss/GitHub-Action-for-pytest@master
         with:
-          args: pytest src/test/resources/taverntesting/test_beer_service.tavern.yml -v
+          args: pytest /home/runner/work/beer-api/beer-api/src/test/resources/taverntesting/test_beer_service.tavern.yml -v
