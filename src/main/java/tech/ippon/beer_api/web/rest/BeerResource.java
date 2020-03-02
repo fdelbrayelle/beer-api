@@ -52,7 +52,7 @@ public class BeerResource {
             throw new BadRequestAlertException("A new beer cannot already have an ID", ENTITY_NAME, "idexists");
         }
         BeerDTO result = beerService.save(beerDTO);
-        return ResponseEntity.badRequest() // created(new URI("/api/beers/" + result.getId()))
+        return ResponseEntity.created(new URI("/api/beers/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
