@@ -8,8 +8,8 @@ jobs:
     name: Tavern Testing job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Launch some Tavern Testing Tests
         uses: cclauss/GitHub-Action-for-pytest@master
         with:
-          args: pytest /home/runner/work/beer-api/beer-api/src/test/resources/taverntesting/test_beer_service.tavern.yml -v
+          args: $GITHUB_WORKSPACE/src/test/resources/taverntesting/test_beer_service.tavern.yml -v
