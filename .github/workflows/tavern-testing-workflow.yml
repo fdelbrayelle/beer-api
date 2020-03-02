@@ -12,4 +12,4 @@ jobs:
       - name: Launch some Tavern Testing Tests
         uses: cclauss/GitHub-Action-for-pytest@master
         with:
-          args: echo "pwd" && pwd && echo "fin pwd" && pytest src/test/resources/taverntesting/test_beer_service.tavern.yml -v
+          args: echo "pwd" && pwd && echo "fin pwd" && echo "ls -l" && ls -l && echo "fin ls -l" && pytest src/test/resources/taverntesting/test_beer_service.tavern.yml -v
